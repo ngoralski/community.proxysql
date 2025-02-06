@@ -13,9 +13,7 @@ on:
   schedule:
     - cron: '0 6 * * *'
   workflow_dispatch:
-      - 'plugins/**'
-      - 'tests/**'
-      - '.github/workflows/ansible-test-plugins.yml'
+
 
 env:
   proxysql_version_file: "./tests/integration/targets/setup_proxysql/defaults/main.yml"
