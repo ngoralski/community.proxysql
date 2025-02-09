@@ -10,7 +10,6 @@ DOCUMENTATION = '''
 ---
 module: proxysql_mysql_users
 author: "Ben Mildren (@bmildren)"
-commitor: "Nicolas Goralski (@ngoralski)"
 short_description: Adds or removes mysql users from proxysql admin interface
 description:
    - The M(community.proxysql.proxysql_mysql_users) module adds or removes mysql users using the
