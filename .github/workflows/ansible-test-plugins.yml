@@ -65,6 +65,8 @@ jobs:
 
 
     steps:
+      - name: Install required Ansible collection (community.mysql)
+        run: ansible-galaxy collection install community.mysql
       - name: >-
           Perform integration testing against
           Ansible version ${{ matrix.ansible }}

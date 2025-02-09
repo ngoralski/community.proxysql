@@ -38,9 +38,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
         with:
-          path: |
-            ansible_collections/community/proxysql
-            ansible_collections/community/mysql
+          path: ansible_collections/community/proxysql
 
       - name: Set up Python ${{ matrix.python }}
         uses: actions/setup-python@v2
