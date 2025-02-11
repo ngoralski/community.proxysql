@@ -22,6 +22,8 @@ jobs:
   sanity:
     name: "Sanity (Python: ${{ matrix.python }}, Ansible: ${{ matrix.ansible }})"
     runs-on: ubuntu-20.04
+    env:
+      ANSIBLE_COLLECTIONS_PATHS: ~/.ansible/collections:/usr/share/ansible/collections
     strategy:
       matrix:
         ansible:
