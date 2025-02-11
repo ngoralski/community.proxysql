@@ -22,8 +22,8 @@ jobs:
   sanity:
     name: "Sanity (Python: ${{ matrix.python }}, Ansible: ${{ matrix.ansible }})"
     runs-on: ubuntu-20.04
-    env:
-      ANSIBLE_COLLECTIONS_PATHS: ~/.ansible/collections:/usr/share/ansible/collections
+#    env:
+#      ANSIBLE_COLLECTIONS_PATHS: ~/.ansible/collections:/usr/share/ansible/collections
     strategy:
       matrix:
         ansible:
@@ -33,7 +33,7 @@ jobs:
           - devel
     steps:
       - name: Install required Ansible collection (community.mysql)
-        run: ansible-galaxy collection install community.mysql
+        run: ansible-galaxy collection install community.mysql -p ./ansible_collections
 
       - name: Perform sanity testing
         uses: ansible-community/ansible-test-gh-action@release/v1
@@ -45,8 +45,8 @@ jobs:
   integration:
     name: "Integration (Python: ${{ matrix.python }}, Ansible: ${{ matrix.ansible }}, ProxySQL: ${{ matrix.proxysql }})"
     runs-on: ubuntu-20.04
-    env:
-      ANSIBLE_COLLECTIONS_PATHS: ~/.ansible/collections:/usr/share/ansible/collections
+#    env:
+#      ANSIBLE_COLLECTIONS_PATHS: ~/.ansible/collections:/usr/share/ansible/collections
     strategy:
       fail-fast: false
       matrix:
@@ -71,7 +71,7 @@ jobs:
             proxysql: 2.6.3
     steps:
       - name: Install required Ansible collection (community.mysql)
-        run: ansible-galaxy collection install community.mysql
+        run: ansible-galaxy collection install community.mysql -p ./ansible_collections
       - name: >-
           Perform integration testing against
           Ansible version ${{ matrix.ansible }}

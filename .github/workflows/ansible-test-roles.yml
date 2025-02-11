@@ -19,7 +19,7 @@ jobs:
     env:
       PY_COLORS: 1
       ANSIBLE_FORCE_COLOR: 1
-      ANSIBLE_COLLECTIONS_PATHS: ~/.ansible/collections:/usr/share/ansible/collections
+#      ANSIBLE_COLLECTIONS_PATHS: ~/.ansible/collections:/usr/share/ansible/collections
     strategy:
       matrix:
         proxysql:
@@ -52,7 +52,7 @@ jobs:
           pip install ansible-lint docker flake8 molecule testinfra yamllint
 
       - name: Install required Ansible collection (community.mysql)
-        run: ansible-galaxy collection install community.mysql
+        run: ansible-galaxy collection install community.mysql -p ./ansible_collections
 
       - name: Run molecule default test scenario
         run: for d in roles/*/; do (cd "$d" && molecule --version && molecule test) done
