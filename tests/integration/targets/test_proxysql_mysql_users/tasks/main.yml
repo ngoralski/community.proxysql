@@ -11,8 +11,8 @@
   vars:
     test_proxysql_mysql_users_check_mode: true
   loop:
-    - mysql_native_password
-    #- caching_sha2_password
+    #- mysql_native_password
+    - caching_sha2_password
   loop_control:
     loop_var: encryption_method
 
@@ -21,8 +21,8 @@
   vars:
     test_proxysql_mysql_users_check_mode: true
   loop:
-    - mysql_native_password
-    #- caching_sha2_password
+    #- mysql_native_password
+    - caching_sha2_password
   loop_control:
     loop_var: encryption_method
 
@@ -31,8 +31,8 @@
   vars:
     test_proxysql_mysql_users_cleanup_after_test: false
   loop:
-    - mysql_native_password
-    #- caching_sha2_password
+    #- mysql_native_password
+    - caching_sha2_password
   loop_control:
     loop_var: encryption_method
 
@@ -41,8 +41,8 @@
   vars:
     test_proxysql_mysql_users_check_idempotence: true
   loop:
-    - mysql_native_password
-    #- caching_sha2_password
+    #- mysql_native_password
+    - caching_sha2_password
   loop_control:
     loop_var: encryption_method
 
@@ -51,8 +51,8 @@
   vars:
     test_proxysql_mysql_users_cleanup_after_test: false
   loop:
-    - mysql_native_password
-    #- caching_sha2_password
+    #- mysql_native_password
+    - caching_sha2_password
   loop_control:
     loop_var: encryption_method
 
@@ -61,8 +61,8 @@
   vars:
     test_proxysql_mysql_users_check_idempotence: true
   loop:
-    - mysql_native_password
-    #- caching_sha2_password
+    #- mysql_native_password
+    - caching_sha2_password
   loop_control:
     loop_var: encryption_method
 
@@ -72,8 +72,8 @@
     test_proxysql_mysql_users_in_memory_only: true
     test_proxysql_mysql_users_cleanup_after_test: false
   loop:
-    - mysql_native_password
-    #- caching_sha2_password
+    #- mysql_native_password
+    - caching_sha2_password
   loop_control:
     loop_var: encryption_method
 
@@ -83,8 +83,8 @@
     test_proxysql_mysql_users_in_memory_only: true
     test_proxysql_mysql_users_check_idempotence: true
   loop:
-    - mysql_native_password
-    #- caching_sha2_password
+    #- mysql_native_password
+    - caching_sha2_password
   loop_control:
     loop_var: encryption_method
 
@@ -94,8 +94,8 @@
     test_proxysql_mysql_users_in_memory_only: true
     test_proxysql_mysql_users_cleanup_after_test: false
   loop:
-    - mysql_native_password
-    #- caching_sha2_password
+    #- mysql_native_password
+    - caching_sha2_password
   loop_control:
     loop_var: encryption_method
 
@@ -105,8 +105,8 @@
     test_proxysql_mysql_users_in_memory_only: true
     test_proxysql_mysql_users_check_idempotence: true
   loop:
-    - mysql_native_password
-    #- caching_sha2_password
+    #- mysql_native_password
+    - caching_sha2_password
   loop_control:
     loop_var: encryption_method
 
@@ -117,8 +117,8 @@
     test_proxysql_mysql_users_with_delayed_persist: true
     test_proxysql_mysql_users_cleanup_after_test: false
   loop:
-    - mysql_native_password
-    #- caching_sha2_password
+    #- mysql_native_password
+    - caching_sha2_password
   loop_control:
     loop_var: encryption_method
 
@@ -129,8 +129,8 @@
     test_proxysql_mysql_users_with_delayed_persist: true
     test_proxysql_mysql_users_check_idempotence: true
   loop:
-    - mysql_native_password
-    #- caching_sha2_password
+    #- mysql_native_password
+    - caching_sha2_password
   loop_control:
     loop_var: encryption_method
 
@@ -141,8 +141,8 @@
     test_proxysql_mysql_users_with_delayed_persist: true
     test_proxysql_mysql_users_cleanup_after_test: false
   loop:
-    - mysql_native_password
-    #- caching_sha2_password
+    #- mysql_native_password
+    - caching_sha2_password
   loop_control:
     loop_var: encryption_method
 
@@ -153,8 +153,8 @@
     test_proxysql_mysql_users_with_delayed_persist: true
     test_proxysql_mysql_users_check_idempotence: true
   loop:
-    - mysql_native_password
-    #- caching_sha2_password
+    #- mysql_native_password
+    - caching_sha2_password
   loop_control:
     loop_var: encryption_method
 
