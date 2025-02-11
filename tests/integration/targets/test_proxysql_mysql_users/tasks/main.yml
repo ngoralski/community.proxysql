@@ -128,6 +128,11 @@
     test_proxysql_mysql_users_in_memory_only: true
     test_proxysql_mysql_users_with_delayed_persist: true
     test_proxysql_mysql_users_check_idempotence: true
+  loop:
+    - mysql_native_password
+    #- caching_sha2_password
+  loop_control:
+    loop_var: encryption_method
 
 - name: "{{ role_name }} | test_delete_mysql_user_with_delayed_persist | test delete mysql user with delayed save to disk/load to runtime"
   include_tasks: test_delete_mysql_user_with_delayed_persist.yml
