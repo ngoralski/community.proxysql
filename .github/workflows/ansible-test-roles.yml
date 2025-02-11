@@ -8,8 +8,8 @@ on:
     paths:
       - 'roles/**'
       - '.github/workflows/ansible-test-roles.yml'
-  schedule:
-    - cron: '0 6 * * *'
+#  schedule:
+#    - cron: '0 6 * * *'
   workflow_dispatch:
 
 jobs:
@@ -19,6 +19,7 @@ jobs:
     env:
       PY_COLORS: 1
       ANSIBLE_FORCE_COLOR: 1
+      ANSIBLE_COLLECTIONS_PATHS: ~/.ansible/collections:/usr/share/ansible/collections
     strategy:
       matrix:
         proxysql:
@@ -32,9 +33,7 @@ jobs:
         python:
           - 2.7
           - 3.8
-
     steps:
-
       - name: Check out code
         uses: actions/checkout@v2
         with:
