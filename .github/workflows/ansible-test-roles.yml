@@ -46,7 +46,7 @@ jobs:
 
       - name: Install molecule and related dependencies
         run: |
-          pip install ansible-lint docker flake8 molecule testinfra yamllint
+          pip install ansible-lint docker flake8 molecule molecule-docker testinfra yamllint
 
       - name: Run molecule default test scenario
         run: for d in roles/*/; do (cd "$d" && molecule --version && molecule test) done
