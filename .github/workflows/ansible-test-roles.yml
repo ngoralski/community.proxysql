@@ -14,23 +14,20 @@ on:
 jobs:
   molecule:
     name: "Molecule (Python: ${{ matrix.python }}, Ansible: ${{ matrix.ansible }}, ProxySQL: ${{ matrix.proxysql }})"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     env:
       PY_COLORS: 1
       ANSIBLE_FORCE_COLOR: 1
     strategy:
       matrix:
         proxysql:
-          - 2.3.2
+          - 2.7.2
         ansible:
-          - stable-2.9
-          ### it looks like there's errors for 2.10+ with ansible-lint (https://github.com/ansible/ansible-lint/pull/878)
-          ### and molecule (_maybe_ relating to https://github.com/ansible-community/molecule/pull/2547)
-          # - stable-2.10
-          # - devel
+          - stable-2.16
+          - devel
         python:
-          - 2.7
-          - 3.8
+          - 3.12
+          - 3.13
 
     steps:
 
